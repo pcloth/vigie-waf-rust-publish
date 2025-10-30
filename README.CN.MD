@@ -14,13 +14,26 @@
 `vigie-waf` ===> `nginx` ===> `index.html`
 
 ### 200并发测试
+![Custom Badge](https://img.shields.io/badge/p(95)-6.92ms-brightgreen)
+
 ![200并发](./assets/k6-test-200.png)
 
 ### 500并发测试
+![Custom Badge](https://img.shields.io/badge/p(95)-125.18ms-brightgreen)
 ![200并发](./assets/k6-test-500.png)
 
 ## 项目架构
 ![架构图](./assets/core.png)
+
+## 防御矩阵+Lua脚本引擎
+将大部分核心防御功能都转换成lua脚本，使用者可以自定义更多的脚本来进行防御。
+并可以控制它们的先后顺序。
+- [x] 1. static by pass: `静态资源忽略`: 可以配置一些静态资源路径，这些路径不执行任何防御脚本；
+- [x] 2. ip blacklist: `IP黑名单`: 可以配置一些永久生效或者定期生效的黑名单
+- [x] 3. ip whitelist: `IP白名单`: 可以配置一些永久生效或者定期生效的白名单
+- [x] 4. cc rate limit: `CC频率控制`: 可以配置站点的访问频率
+- [x] 5. search engines: `智能搜索引擎检测`: 可以识别主流搜索引擎并鉴别真伪，从而让搜索引擎可以正常爬取，而伪造的搜索引擎爬虫将会被丢到黑名单30分钟；
+- [x] 6. pow: `工作量证明防御`: 将访问的用户第一次跳转到一个loading页面，并在页面由js计算一些区块链算法，校验成功后的才可以访问上游服务器，这是一个重磅功能，能防御大部分机器人和一定程度上防御DDos攻击
 
 ## 项目进展
 - [x] 核心功能开发
@@ -88,6 +101,7 @@ docker run -it -p 80:80 -p 443:443 \
 ![configSite](./assets/configSite.png)
 
 ### 完成
+感谢你使用vigie-waf
 
 
 

@@ -14,13 +14,27 @@ The defense architecture used for testing:
 `vigie-waf` ===> `nginx` ===> `index.html`
 
 ### 200 concurrent connections
+![Custom Badge](https://img.shields.io/badge/p(95)-6.92ms-brightgreen)
+
 ![200 concurrent](./assets/k6-test-200.png)
 
 ### 500 concurrent connections
+![Custom Badge](https://img.shields.io/badge/p(95)-125.18ms-brightgreen)
+
 ![500 concurrent](./assets/k6-test-500.png)
 
 ## Project Architecture
 ![architecture](./assets/core.png)
+
+## Defense matrix + Lua scripting engine
+Most of the core defense logic can be expressed as Lua scripts. Users can add custom scripts for additional defenses and control the execution order of these scripts. Current built-in modules include:
+
+- [x] 1. Static bypass: Configure static resource paths that are ignored by defense scripts.
+- [x] 2. IP blacklist: Configure blacklists that apply permanently or on a schedule.
+- [x] 3. IP whitelist: Configure whitelists that apply permanently or on a schedule.
+- [x] 4. CC rate limit: Configure rate limits for site access.
+- [x] 5. Search engines detection: Identify mainstream search engines and verify their authenticity so that genuine crawlers can access the site while forged crawlers are added to the blacklist for 30 minutes.
+- [x] 6. PoW (Proof-of-Work) defense: On first access, visitors are redirected to a lightweight loading page where the browser runs a small JS-based PoW calculation. Only clients that solve the challenge are allowed to reach the upstream server. This is an effective mitigation against many bots and can help against certain types of DDoS attacks.
 
 ## Project Progress
 - [x] Core functionality implemented

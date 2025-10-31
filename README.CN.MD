@@ -13,6 +13,16 @@
 
 `vigie-waf` ===> `nginx` ===> `index.html`
 
+使用默认防御配置，2个worker
+
+### 汇总表
+
+|最高并发数|总请求数|失败率|p(95)响应速度|
+|---|---|---|---|
+|200|88765|0|6.92ms|
+|500|176176|0|125.18ms|
+|1000|481326|0|410.16ms|
+
 ### 200并发测试
 ![Custom Badge](https://img.shields.io/badge/p(95)-6.92ms-brightgreen)
 
@@ -21,6 +31,10 @@
 ### 500并发测试
 ![Custom Badge](https://img.shields.io/badge/p(95)-125.18ms-brightgreen)
 ![200并发](./assets/k6-test-500.png)
+
+### 1000并发测试
+![Custom Badge](https://img.shields.io/badge/p(95)-410.16ms-brightgreen)
+![200并发](./assets/k6-test-1000.png)
 
 ## 项目架构
 ![架构图](./assets/core.png)
@@ -40,7 +54,7 @@
 - [x] 多进程架构
 - [ ] 完善文档
 - [ ] 全内存共享架构改造
-- [ ] 其他功能迭代
+- [ ] 其他功能迭代计划：自动证书更新、管理端功能优化
 - [ ] 开源代码
 
 

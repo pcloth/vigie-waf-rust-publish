@@ -1,4 +1,4 @@
-# vigie-waf — vigie Web Firewall
+# vigie-waf — Vigie Web Firewall
 
 [中文说明](./README.CN.MD)
 
@@ -13,6 +13,14 @@ The defense architecture used for testing:
 
 `vigie-waf` ===> `nginx` ===> `index.html`
 
+### Summary
+
+| Max concurrency | Total requests | Failure rate | p(95) latency |
+|---|---:|---:|---:|
+| 200 | 88,765 | 0% | 6.92ms |
+| 500 | 176,176 | 0% | 125.18ms |
+| 1000 | 481,326 | 0% | 410.16ms |
+
 ### 200 concurrent connections
 ![Custom Badge](https://img.shields.io/badge/p(95)-6.92ms-brightgreen)
 
@@ -22,6 +30,11 @@ The defense architecture used for testing:
 ![Custom Badge](https://img.shields.io/badge/p(95)-125.18ms-brightgreen)
 
 ![500 concurrent](./assets/k6-test-500.png)
+
+### 1000 concurrent connections
+![Custom Badge](https://img.shields.io/badge/p(95)-410.16ms-brightgreen)
+
+![1000 concurrent](./assets/k6-test-1000.png)
 
 ## Project Architecture
 ![architecture](./assets/core.png)
@@ -41,7 +54,7 @@ Most of the core defense logic can be expressed as Lua scripts. Users can add cu
 - [x] Multi-process architecture
 - [ ] Improve documentation
 - [ ] Migrate to full in-memory shared architecture
-- [ ] Other feature iterations
+- [ ] Other feature iterations — planned: automated certificate renewal, admin panel improvements
 - [ ] Open-source the code
 
 

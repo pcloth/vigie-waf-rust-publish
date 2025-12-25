@@ -24,20 +24,20 @@ The defense architecture used for testing:
 ### 200 concurrent connections
 ![Custom Badge](https://img.shields.io/badge/p(95)-6.92ms-brightgreen)
 
-![200 concurrent](./assets/k6-test-200.png)
+![200 concurrent](./docs/assets/k6-test-200.png)
 
 ### 500 concurrent connections
 ![Custom Badge](https://img.shields.io/badge/p(95)-125.18ms-brightgreen)
 
-![500 concurrent](./assets/k6-test-500.png)
+![500 concurrent](./docs/assets/k6-test-500.png)
 
 ### 1000 concurrent connections
 ![Custom Badge](https://img.shields.io/badge/p(95)-410.16ms-brightgreen)
 
-![1000 concurrent](./assets/k6-test-1000.png)
+![1000 concurrent](./docs/assets/k6-test-1000.png)
 
 ## Project Architecture
-![architecture](./assets/core.png)
+![architecture](./docs/assets/core.png)
 
 ## Defense matrix + Lua scripting engine
 Most of the core defense logic can be expressed as Lua scripts. Users can add custom scripts for additional defenses and control the execution order of these scripts. Current built-in modules include:
@@ -107,12 +107,12 @@ Be sure to change the `ADMIN_USERNAME`, `ADMIN_PASSWORD`, and `JWT_SECRET` envir
 
 After the application is running, open your browser and visit http://localhost to see the welcome page:
 
-![welcome](./assets/welcome.png)
+![welcome](./docs/assets/welcome.png)
 
 ### Step 2
 
 Click through to the admin login page:
-![login](./assets/login.png)
+![login](./docs/assets/login.png)
 
 Log in using the credentials you configured via environment variables.
 
@@ -121,12 +121,12 @@ Log in using the credentials you configured via environment variables.
 ### Step 3
 
 Change your language. Currently Chinese and English are supported.
-![changeLang](./assets/changeLang.png)
+![changeLang](./docs/assets/changeLang.png)
 
 ### Step 4
 
 Configure your site(s):
-![configSite](./assets/configSite.png)
+![configSite](./docs/assets/configSite.png)
 
 ### Done
 
@@ -137,39 +137,39 @@ Thank you for trying vigie-waf.
 ### Home
 > The screenshot shows that shortly after going online, attackers were greatly reduced thanks to the applied defenses.
 
-![home](./assets/review/home.png)
+![home](./docs/assets/review/home.png)
 
 ### Rules
 > You can add more custom defense scripts or fine-tune the default system scripts.
 
-![rules](./assets/review/rules.png)
+![rules](./docs/assets/review/rules.png)
 
 ### Whitelist
 > Whitelist entries can be set with expiration times.
 
-![ipw](./assets/review/ipw.png)
+![ipw](./docs/assets/review/ipw.png)
 
 ### Blacklist
 > Blacklist entries can be set with expiration times. Fake crawlers detected by the firewall are automatically added to the blacklist and blocked for 30 minutes.
 
-![ipb](./assets/review/ipb.png)
+![ipb](./docs/assets/review/ipb.png)
 
 ### Intelligent crawler defense
 > Requests that declare themselves as crawlers via the User-Agent are subject to reverse DNS verification. Forged crawlers are rejected and their IP addresses are blocked for 30 minutes. The screenshot shows the UI for editing/adding/managing which crawlers are allowed.
 
-![crawlers](./assets/review/crawlers.png)
+![crawlers](./docs/assets/review/crawlers.png)
 
 > This feature balances SEO and defense: choose which crawlers may access your site and optionally limit their crawl rate.
 
-![crawlersEdit](./assets/review/crawlersEdit.png)
+![crawlersEdit](./docs/assets/review/crawlersEdit.png)
 
 ### PoW (Proof-of-Work), CC defense, and static resource configuration
 > Easily toggle PoW proof-of-work, enable/disable CC rate limiting and set static resource bypass rules.
 
-![security](./assets/review/security.png)
+![security](./docs/assets/review/security.png)
 
 ## Version upgrades
 > You can perform online OTA upgrades to update to the latest version seamlessly and for free.
 
-![update](./assets/review/update.png)
+![update](./docs/assets/review/update.png)
 

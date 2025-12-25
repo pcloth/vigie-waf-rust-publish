@@ -26,18 +26,18 @@
 ### 200并发测试
 ![Custom Badge](https://img.shields.io/badge/p(95)-6.92ms-brightgreen)
 
-![200并发](./assets/k6-test-200.png)
+![200并发](./docs/assets/k6-test-200.png)
 
 ### 500并发测试
 ![Custom Badge](https://img.shields.io/badge/p(95)-125.18ms-brightgreen)
-![200并发](./assets/k6-test-500.png)
+![200并发](./docs/assets/k6-test-500.png)
 
 ### 1000并发测试
 ![Custom Badge](https://img.shields.io/badge/p(95)-410.16ms-brightgreen)
-![200并发](./assets/k6-test-1000.png)
+![200并发](./docs/assets/k6-test-1000.png)
 
 ## 项目架构
-![架构图](./assets/core.png)
+![架构图](./docs/assets/core.png)
 
 ## 防御矩阵+Lua脚本引擎
 将大部分核心防御功能都转换成lua脚本，使用者可以自定义更多的脚本来进行防御。
@@ -95,24 +95,24 @@ docker run -it -p 80:80 -p 443:443 \
 
 当运行好项目之后，直接在浏览器中访问http://localhost，会看到欢迎页面
 
-![welcome](./assets/welcome.png)
+![welcome](./docs/assets/welcome.png)
 
 ### 第二步
 
 点击进入后可以看到管理端登录页面
-![login](./assets/login.png)
+![login](./docs/assets/login.png)
 
-输入你之前在环境变量中配置的账号和密码
+点击页面上`黄色的按钮`进行证书下载，然后输入你之前在环境变量中配置的账号和密码
 
 > 默认账号为`admin`，密码为`admin123`
 
 ### 第三步
 修改你的语言：目前支持`中文`和`英文`
-![changeLang](./assets/changeLang.png)
+![changeLang](./docs/assets/changeLang.png)
 
 ### 第四步
 配置你的站点
-![configSite](./assets/configSite.png)
+![configSite](./docs/assets/configSite.png)
 
 ### 完成
 感谢你使用vigie-waf
@@ -122,49 +122,49 @@ docker run -it -p 80:80 -p 443:443 \
 ### 首页
 > 图中可以观察到上线后不久，经过防御，攻击者大批量减少
 
-![home](./assets/review/home.png)
+![home](./docs/assets/review/home.png)
 
 ### 规则设置
 
 > 可以新增更多的个性防御脚本，也可以通过修改系统默认防御脚本进行微调
 
-![rules](./assets/review/rules.png)
+![rules](./docs/assets/review/rules.png)
 
 
 ### 白名单
 
 > 白名单：可以设置过期时间。
 
-![ipw](./assets/review/ipw.png)
+![ipw](./docs/assets/review/ipw.png)
 
 ### 黑名单
 
 > 黑名单：可以设置过期时间。伪爬虫也会被防火墙自动加入黑名单屏蔽30分钟
 
-![ipb](./assets/review/ipb.png)
+![ipb](./docs/assets/review/ipb.png)
 
 ### 智能爬虫防御
 
 > 根据ua申明为爬虫的请求，会进行DNS反向查询，如果是伪造的爬虫将拒绝请求并且屏蔽IP地址30分钟。图中是可以编辑/新增/管理爬虫是否允许进站。
 
-![crawlers](./assets/review/crawlers.png)
+![crawlers](./docs/assets/review/crawlers.png)
 
 
 > 这个功能将平衡SEO和防御之间的关系，你希望那些爬虫可以进站访问，并且可以限制它的频率
 
-![crawlersEdit](./assets/review/crawlersEdit.png)
+![crawlersEdit](./docs/assets/review/crawlersEdit.png)
 
 ### POW工作量证明、CC防御、静态资源配置
 
 > 你可以简单的配置pow工作量证明开关、CC防御开关和额度、以及完全不进行防御的静态资源请求；
 
-![security](./assets/review/security.png)
+![security](./docs/assets/review/security.png)
 
 ## 版本升级
 
 > 如果你需要，可以进行在线OTA升级，无痛且免费升级到最新版本
 
-![update](./assets/review/update.png)
+![update](./docs/assets/review/update.png)
 
 
 

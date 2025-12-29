@@ -7,6 +7,8 @@ export default defineUserConfig({
 
   title: 'vigie-waf-rust',
   description: '一个基于Rust的高性能Web应用防火墙',
+  // Set base so GitHub Pages serves assets under the repo path
+  base: './',
 
   theme: defaultTheme({
     logo: '../../../assets/logo.png',

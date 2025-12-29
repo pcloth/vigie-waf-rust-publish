@@ -5,12 +5,12 @@
 
 ### windows
 
-1、下载[最新releases版本](https://github.com/pcloth/vigie-waf-rust-publish/releases)
+1、下载[最新releases版本](https://github.com/pcloth/vigie-waf-rust/releases)
 
 2、在项目根目录直接运行./bin/vigie-waf-rust.exe
 
 ### linux
-1、下载[最新releases版本](https://github.com/pcloth/vigie-waf-rust-publish/releases)
+1、下载[最新releases版本](https://github.com/pcloth/vigie-waf-rust/releases)
 
 2、在项目根目录直接运行./bin/vigie-waf-rust
 

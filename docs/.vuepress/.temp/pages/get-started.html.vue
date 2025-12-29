@@ -1,10 +1,10 @@
 <template><div><h1 id="快速开始" tabindex="-1"><a class="header-anchor" href="#快速开始"><span>快速开始</span></a></h1>
 <h2 id="下载和部署" tabindex="-1"><a class="header-anchor" href="#下载和部署"><span>下载和部署</span></a></h2>
 <h3 id="windows" tabindex="-1"><a class="header-anchor" href="#windows"><span>windows</span></a></h3>
-<p>1、下载<a href="https://github.com/pcloth/vigie-waf-rust-publish/releases" target="_blank" rel="noopener noreferrer">最新releases版本</a></p>
+<p>1、下载<a href="https://github.com/pcloth/vigie-waf-rust/releases" target="_blank" rel="noopener noreferrer">最新releases版本</a></p>
 <p>2、在项目根目录直接运行./bin/vigie-waf-rust.exe</p>
 <h3 id="linux" tabindex="-1"><a class="header-anchor" href="#linux"><span>linux</span></a></h3>
-<p>1、下载<a href="https://github.com/pcloth/vigie-waf-rust-publish/releases" target="_blank" rel="noopener noreferrer">最新releases版本</a></p>
+<p>1、下载<a href="https://github.com/pcloth/vigie-waf-rust/releases" target="_blank" rel="noopener noreferrer">最新releases版本</a></p>
 <p>2、在项目根目录直接运行./bin/vigie-waf-rust</p>
 <h3 id="docker运行-推荐" tabindex="-1"><a class="header-anchor" href="#docker运行-推荐"><span>docker运行(推荐)</span></a></h3>
 <p>由于vigie-waf是支持ota升级的，所以如果想使用ota升级，不要直接用容器内的项目运行。

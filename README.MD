@@ -63,7 +63,7 @@ Most of the core defense logic can be expressed as Lua scripts. Users can add cu
 
 #### Windows
 
-1. Download the latest release from the releases page: https://github.com/pcloth/vigie-waf-rust-publish/releases
+1. Download the latest release from the releases page: https://github.com/pcloth/vigie-waf-rust/releases
 
 2. Run the executable from the project root:
 
@@ -73,7 +73,7 @@ Most of the core defense logic can be expressed as Lua scripts. Users can add cu
 
 #### Linux
 
-1. Download the latest release from the releases page: https://github.com/pcloth/vigie-waf-rust-publish/releases
+1. Download the latest release from the releases page: https://github.com/pcloth/vigie-waf-rust/releases
 
 2. Run the binary from the project root:
 
